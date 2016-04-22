@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新增表单属性</title>
+</head>
+
+<style type="text/css">
+    p {
+        margin-bottom: 5px;
+    }
+</style>
+
+<body>
+    
+<h1>表单属性</h1>
+<form id="user_form">
+    <p>1. autocomplete:submit后value会自动保存在当前text内</p>
+    name: <input type='text' name="text1" autocomplete="on" />
+    
+    <p>2. autofocus 属性规定在页面加载时，域自动地获得焦点。</p>
+    email: <input type='email' name="email2" autofocus="autofocus" />
+    
+    <p>3. multiple 属性规定输入域中可选择多个值。</p>
+    img: <input type="file" name="img" multiple="multiple" />
+    
+    <p>4. novalidate 属性规定在提交表单时不应该验证 form 或 input 域。  email不支持该属性，但form表单支持</p>
+    email: <input type="email" name = 'emial2' novalidate="novalidate"/>
+    
+    <p>5. placeholder 属性提供一种提示（hint），描述输入域所期待的值。</p>
+    <input type="search" name="user_search"  placeholder="Eragon" />
+
+    <p>6. pattern 属性规定用于验证 input 域的模式（pattern）。</p>   
+    Country code: <input type="text" name="country_code" pattern="[A-z]{3}" title="Three letter country code" />
+
+    <p>7. required 属性规定必须在提交之前填写输入域（不能为空）。</p>
+    Name: <input type="text" name="usr_name" required="required" />
+    
+    <p>8. 表单重写属性</p>
+    <input type="submit" formnovalidate="true" value="Submit without validation" id="submit2" />
+    <input type="submit" />
+</form>
+
+<hr/>    
+<p>9. form 属性规定输入域所属的一个或多个表单。</p>
+<input type="text" name="lname" form="user_form"/>
+
+</body>
+</html>
